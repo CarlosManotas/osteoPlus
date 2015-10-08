@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Osteo Plus</title>
+	<link rel="stylesheet" href="css/estilos.css">
+	<link href='http://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="fonts/stylesheet.css">
+</head>
+
+<body class="max-container" ng-app>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.4";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+
+	<!-- HEADER -->
+	<div class="cabecera">
+		<div class="cabecera--container" id="logo">
+			<img class="logo" src="img/logo2.svg" alt="">
+			<div class="fb-like" data-href="https://www.facebook.com/MundoNaturalHoy?fref=ts" data-layout="button_count"></div>
+		</div>
+		<h2 class="paratop desde-web icon-telefono espacio">LLAMÁ HOY AL:<br>(011) <span>3723-1963</span></h2>
+	</div>
+	<div class="container--img">
+			<div class="content">
+				<h1>LA SALUD DE LOS HUESOS<br>ES SUMAMENTE IMPORTANTE</h1>
+			</div>
+	</div>
+
+	<!-- FIN  HEADER -->
+	<div class="container--formulario">
+		<h2 class="swich">LLAMÁ HOY AL:<br>(011) <span>3723-1963</span></h2>
+		<span class="btn-llamar"></span>
+		<div class="container--formulario__box">
+			<form method="post" name="formulario" ng-submit="formulario.$valid" action="form.php" class="container--formulario__box--flex" novalidate>
+				<h2>PREVENÍ QUEBRADURAS</h2>
+				<h6>TENÉ HOY TU OSTEOPLUS</h6>
+				<input type="name" ng-model="nombre" name="nombre" placeholder="Nombre y Apellido" required  ng-minlength="2">
+				<div class="error1">
+                    <ul>
+                        <li ng-if="formulario.nombre.$error.minlength">debe completar este campo </li>
+                    </ul>
+            	</div>
+				<input type="email" ng-model="email" name="email" placeholder="E-mail" required ng-pattern="/^([0-9a-zA-Z_]([-.\w]*[0-9a-zA-Z_.-])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$/">
+				<div class="error1">
+                    <ul>
+                        <li ng-if="formulario.email.$error.pattern">debe colocar un mail valido </li>
+                    </ul>
+            	</div>
+				<input type="number" name="cod" ng-model="cod" placeholder="Cod. Área Ej.: (011)" required ng-maxlength="5" ng-minlength="2">
+				<div class="error1">
+                 <ul>
+                    <li ng-if="formulario.cod.$error.maxlength">el codigo es muy largo </li>
+                    <li ng-if="formulario.cod.$error.minlength">el codigo es muy corto </li>
+                 </ul>
+            	</div>
+				<input type="number" name="telefono" ng-model="telefono" placeholder="Teléfono" required ng-minlength="6"> 
+				<div class="error1">
+                    <ul>
+                        <li ng-show="formulario.telefono.$error.minlength">debe colocar un telefono valido </li>
+                    </ul>
+            	</div>
+				<button ng-disabled="formulario.$invalid">ENVIAR</button>
+			</form>
+		</div>
+	</div>
+	<div class="container">
+		<div class="container--pasos">
+			<div class="container--pasos__5">
+				<h2><img src="img/logo.svg" alt=""></h2>
+			</div>
+			<div class="container--pasos__6">
+				<div class="parrafo">
+					<p>Los huesos son los principales responsables de darnos soporte, movimiento y protegernos de lesiones en el cerebro, el corazón y otros órganos. Además, almacenan minerales como el calcio y el fósforo, los cuales nos ayudan a mantenernos fuertes. No basta sólo con consumir leche, como suele decirse, ya que si bien es de vital importancia para obtener calcio, no es lo único que nos beneficia: hay que tener los nutrientes necesarios para nuestro correcto desarrollo y protección ósea.</p>
+				</div>
+				<div class="parrafoImg">
+					<div class="contenido-circular"><img src="img/paso1.jpg" alt=""></div>
+					<div class="contenido-circular"><img src="img/paso2.jpg" alt=""></div>
+					<div class="contenido-circular"><img src="img/paso3.jpg" alt=""></div>
+				</div>
+				<div class="parrafo">
+					<p><span>Las personas con huesos débiles corren un mayor riesgo de fracturarse</span>. Por eso es necesario mantenerlos fuertes para poder disfrutar de una vida activa y saludable. Hace algunos años se sabía muy poco sobre las enfermedades óseas. Incluso muchos médicos creían que la debilidad de los huesos y las fracturas formaban parte de la vejez y no podían evitarse. Afortunadamente, hoy sabemos que esto no es así.</p>
+				</div>
+			</div>
+		</div>
+		<div class="contenedor--column.centrado">
+			<div class="item--titulo1">
+				<h2>LA IMPORTANCIA DEL CUIDADO DE LOS HUESOS EN LA ADULTEZ</h2>
+			</div>
+			<div class="item--sides">
+				<div class="item--side">
+					<h3>RECOMENDACIÓN<br><span>+40</span></h3>
+					<p>La recomendación es que si se es mayor de 40 años, independientemente del sexo, se le dé un cuidado y atención especial a los huesos, ya que es posible que en la juventud los efectos no se sientan, pero al llegar a la adultez existe el riesgo de perder el calcio, siendo mucho más susceptible a las fracturas.</p>
+					<figure class="figure1">
+						
+					</figure>
+				</div>
+				<div class="item--side">
+					<figure class="figure2">
+						
+					</figure>
+					<h3>FRACTURA<br><span>+50</span></h3>
+					<p>Cuando los huesos se rompen (lo que se conoce como fractura) pueden causar mucho dolor y, generalmente, se requieren cirugías para repararlos. Además, en la etapa de la adultez, si se llegan a quebrar algunos huesos, traerían complicaciones que interferirían ampliamente para tener una buena calidad de vida. Sin embargo, la buena noticia es que nunca es demasiado tarde para cuidar nuestra salud ósea.</p>
+					<button id="btn" >consultar <span class="icon-derecha"></span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="pack">
+		<div class="container">
+			<div class="container--pack">
+				<div class="item--titulo">
+					<h2>PROTEGÉ TUS HUESOS LAS 24 HORAS CON OSTEOPLUS.</h2>
+				</div>
+				<p> El revolucionario suplemento natural, desarrollado con la novedosa fórmula H-10. El revolucionario método de protección ósea que es un éxito en todo el mundo, porque produce un efecto solidificador de huesos y, de esta forma, previene quebraduras que podrían llegar a traer números problemas futuros, tanto motrices como a nivel salud. La fórmula H-10 es lo último en materia en protección de huesos en los países más avanzados del mundo.</p>
+				<div class="item--pack">
+					<figure>
+						<img src="img/pack.png" alt="">
+						<div class="fb-like" data-href="https://www.facebook.com/MundoNaturalHoy?fref=ts" data-layout="button_count" style="position:absolute; bottom:5px; left: 5em"></div>
+					</figure>
+					<div class="item--pack--textos desde-tablet">
+						<h3>FÓRMULA H-10.<br><span>LO MÁS NOVEDOSO EN PROTECCIÓN DE HUESOS.</span></h3>
+						<div class="item--item">
+							<span class="icon-aceptar"></span><p>FORTALECE Y AUMENTA LA DENSIDAD DE LOS HUESOS.</p>
+						</div>
+						<div class="item--item">
+							<span class="icon-aceptar"></span><p>PREVIENE LA PÉRDIDA DE CALCIO.</p>
+						</div>
+						<div class="item--item">
+							<span class="icon-aceptar"></span><p>RETRASA EL DETERIORO DE HUESOS, DIENTES Y CARTÍLAGOS.</p>
+						</div>
+						<div class="item--item">
+							<span class="icon-aceptar"></span><p>DISMINUYE EL RIESGO DE FRACTURA.</p>
+						</div>
+						<div class="item--item">
+							<span class="icon-aceptar"></span><p>FAVORECE EL BIENESTAR GENERAL</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="container--porque">
+			<p>Según la International Osteoporosis Foundation, 1 de cada 3 mujeres y 1 de cada 5 hombres mayores de 50 años sufrirá una fractura por problemas en los huesos en lo que les quede de vida. Las mujeres son más propensas a encontrar dificultades óseas ya que durante los años posteriores a la menopausia se produce una acelerada caída en los niveles de estrógenos que genera una pérdida de densidad ósea.</p>
+			<h2>POR QUÉ SIEMPRE ES BUENO TOMAR <span><img src="img/logo.svg" alt=""></span></h2>
+			<h3>¿SUFRISTE QUEBRADURAS DE HUESOS?</h3>
+			<div class="contenedor--column--around si-no">
+				<div class="contenedor--around no ">
+					<div class="centrado h4">
+						<h4>NO</h4>
+					</div>
+					<p>Existen nutrientes necesarios para los huesos, los cuales muchas veces se disminuyen por los alimentos que consumimos a diario. Osteoplus te aportará los sustentos que mejorarán tu calidad ósea, para que estés prevenido en caso de caídas o torceduras.</p>
+				</div>
+				<div class="contenedor--around si">
+					<div class="centrado h4">
+						<h4>SI</h4>
+					</div>
+					<p>La fórmula H-10 posee innumerables propiedades regenerativas para los huesos. Si sufriste quebraduras, Osteoplus hará que tu recuperación sea mucho más rápida y efectiva, porque actúa directamente sobre la lesión, hasta que el hueso vuelva a quedar como nuevo.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="testimonios">
+		<div class="container">
+			<div class="container--testimonios">
+				<h2>Ellos, cuidan sus huesos y disfrutan<br> de una mejor calidad de vida</h2>
+				<div class="container--testimonios--max">
+					<div class="container--testimonios__1">
+						<div class="container--testimonios__1--img" >
+						</div>
+						<p>“Hace algunos años, me quebré varios huesos al caerme de un caballo. Estaba desesperado; creía que la recuperación iba a ser eterna y, además, tenía dudas sobre si mi movilidad volvería a ser la de antes. Afortunadamente, luego de visitar a un experto, empecé a tomar Osteoplus. Si bien sabía que me iba a ayudar, nunca creí que fuera tan efectivo. En muy poco tiempo logré recuperar la salud de mis huesos al 100 %. Por esta razón decidí dar mi testimonio. Espero poder ayudar a los que tienen el problema que alguna vez tuve yo”.<br><br>Marcelo, 42 años. MENDOZA.</p>
+					</div>
+					<div class="container--testimonios__2 desde-tablet">
+						<div class="container--testimonios__2--img">
+						</div>
+						<p>“Soy una mujer mayor y, a mi edad, tengo bien claro que siempre es mejor prevenir que curar. Tengo amigas que sufrieron quebraduras y sus huesos no se recuperaron del todo. Yo, desde que uso Osteoplus, me siento con mucha más confianza para hacer movimientos, más segura con mi cuerpo y conmigo misma. Este suplemento realmente aporta las vitaminas y nutrientes que necesitamos las personas de mi edad. ¡Gracias!”<br><br>Susana, 63años. WILDE.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">		
+		<div class="container--formularioFooter desde-movil">
+			<h3>PREVENÍ QUEBRADURAS. VIVÍ DIGNAMENTE.<br>TENÉ HOY TU OSTEOPLUS.</h3>
+			<h6>Tu consulta es totalmente privada.<br>Completá tus datos y télefono para que te llame un especialista.</h6>
+			<form method="post" id="formValid" action="form.php" class= "form" name="formulario2" ng-submit="formulario2.$valid" novalidate >
+				<div class="formulario">
+					<input type="text" placeholder="NOMBRE Y APELLIDO" name="nombre2" required  ng-model="nombre2" ng-minlength="2">
+					<div class="error">
+	                    <ul>
+	                        <li ng-if="formulario2.nombre2.$error.minlength">debe completar este campo </li>
+	                    </ul>
+                	</div>
+					<input type="email" name="email2" placeholder="E-MAIL" required ng-model="email2" ng-pattern="/^([0-9a-zA-Z_]([-.\w]*[0-9a-zA-Z_.-])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$/">
+					<div class="error2">
+	                    <ul>
+	                        <li ng-if="formulario2.email2.$error.pattern">debe colocar un mail valido </li>
+	                    </ul>
+                	</div>
+				</div>
+				<div class="formulario">
+					<input type="number" name="cod2" placeholder="COD. ÁREA EJ.: (011)" required ng-model="cod2" ng-maxlength="5" ng-minlength="2">
+					<div class="error">
+                     <ul>
+                        <li ng-if="formulario2.cod2.$error.maxlength">el codigo es muy largo </li>
+                        <li ng-if="formulario2.cod2.$error.minlength">el codigo es muy corto </li>
+                     </ul>
+                	</div>
+					<input type="number" name="telefono2" placeholder="TELÉFONO" required ng-model="telefono2" ng-minlength="6">
+					<div class="error2">
+	                    <ul>
+	                        <li ng-if="formulario2.telefono2.$error.minlength">debe colocar un telefono valido </li>
+	                    </ul>
+                	</div>
+				</div>
+				<input type="submit" value="OBTENELO AHORA" ng-disabled="formulario2.$invalid">
+			</form>
+		</div>
+	</div>
+    <div class="footer centrado">
+      <div class="contenedor--flex--footer around">
+        <div class="contenedor--items between row">
+          <figure><img src="img/Telefonista.png" alt=""></figure>
+          <p>(011) 3723-1963<br> Conseguilo exclusivamente<br>por venta telefónica.</p>
+        </div>
+        <div class="contenedor--items between row">
+          <figure><img src="img/Relojfooter.png" alt=""></figure>
+          <p>Atención<br>de 7 a 23 hs.</p>
+        </div>
+        <div class="contenedor--items between row">
+          <figure><img src="img/Camioneta.png" alt=""></figure>
+          <p>Envíos a domicilio<br> en todo el país.</p>
+        </div>
+        <div class="contenedor--items between row">
+          <figure><img src="img/Tarjeta.png" alt=""></figure>
+          <p>Aceptamos<br>todas las tarjetas.</p>
+        </div>
+      </div>
+    </div>
+	<footer id="footer">
+		<div class="footer2">
+			<p>Ante la menor duda consulte a su médico y/o farmacéutico. <a href="politicasdeprivacidad.html">TÉRMINOS, CONDICIONES Y POLÍTICAS DE PRIVACIDAD</a> Osteo Plus Copyright © 2015 - All Rights Reserved - Todos los derechos Reservados</p>
+		</div>
+			
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js">
+	</script>
+	<script src="js/jquery.easing.1.3.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+</body>
+</html>
